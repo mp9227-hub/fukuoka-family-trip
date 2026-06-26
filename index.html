@@ -328,11 +328,11 @@
         var arr=await r.json(); var c=(arr&&arr[0]&&arr[0].content)||{};
         var hasReal=SECTIONS.some(function(id){return c[id]!=null;});
         if(hasReal){applyData(c);localStorage.setItem('fk_cache',JSON.stringify(c));setSync('최신본 ✓');if(showmsg)toast('최신 내용으로 새로고침했어요');return;}
-        setSync('기본본(아직 저장된 편집 없음)');return;
+        localStorage.removeItem('fk_cache');setSync('기본본(저장된 편집 없음)');return;
       }
-      if(useCache())setSync('이 기기 저장본 표시(공유 미반영)');else setSync('기본본');
+      setSync('서버 오류('+r.status+') — 기본본 표시');
     }catch(e){
-      if(useCache())setSync('연결 실패 — 캐시본 표시');else setSync('연결 실패 — 기본본');
+      setSync('연결 실패 — 기본본 표시');
     }
   }
   async function saveRemote(){
