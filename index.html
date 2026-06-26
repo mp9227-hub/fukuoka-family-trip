@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e8503a">
+<title>후쿠오카 가족여행 2026.6.27~30</title>
+<style>
+  :root{
+    --bg:#f6f4ef; --card:#fff; --ink:#23201d; --sub:#6f6863;
+    --accent:#e8503a; --accent2:#2b7a78; --line:#e7e2da; --soft:#fbeae6;
+    --gold:#b8860b;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Apple SD Gothic Neo","Noto Sans KR",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.6;font-size:15px;-webkit-text-size-adjust:100%}
+  header{background:linear-gradient(135deg,#e8503a,#f2864b);color:#fff;padding:22px 18px 18px;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+  header h1{margin:0;font-size:19px;letter-spacing:-.3px}
+  header .meta{margin-top:4px;font-size:12.5px;opacity:.95}
+  nav{display:flex;gap:6px;margin-top:14px;overflow-x:auto;padding-bottom:2px}
+  nav button{flex:0 0 auto;border:none;background:rgba(255,255,255,.22);color:#fff;padding:8px 13px;border-radius:20px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+  nav button.active{background:#fff;color:var(--accent)}
+  main{max-width:760px;margin:0 auto;padding:16px 14px 60px}
+  section{display:none;animation:fade .25s ease}
+  section.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 15px;margin:12px 0;box-shadow:0 1px 4px rgba(0,0,0,.03)}
+  .card h2{margin:0 0 6px;font-size:16px}
+  .card h3{margin:14px 0 6px;font-size:14.5px;color:var(--accent2)}
+  .pill{display:inline-block;background:var(--soft);color:var(--accent);font-size:11.5px;font-weight:700;padding:2px 9px;border-radius:10px;margin-bottom:8px}
+  .day-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+  .day-h .date{color:var(--sub);font-size:13px}
+  ul.tl{list-style:none;margin:8px 0 0;padding:0}
+  ul.tl li{position:relative;padding:10px 0 10px 64px;border-top:1px dashed var(--line)}
+  ul.tl li:first-child{border-top:none}
+  ul.tl li .t{position:absolute;left:0;top:10px;font-weight:700;font-size:12.5px;color:var(--accent);width:56px}
+  ul.tl li .act{font-weight:600}
+  ul.tl li .det{display:block;color:var(--sub);font-size:12.8px;margin-top:2px}
+  .move{display:inline-block;background:#eef5f4;color:var(--accent2);font-size:11.5px;padding:1px 7px;border-radius:7px;margin-top:3px}
+  a{color:var(--accent);font-weight:600;word-break:break-all}
+  .resv{border-left:3px solid var(--accent);background:#fff;border-radius:8px;padding:10px 12px;margin:8px 0}
+  .resv b{font-size:14px}
+  .resv .info{color:var(--sub);font-size:12.8px;margin:3px 0}
+  .tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:7px;margin-right:4px}
+  .tag.ok{background:#e3f3e8;color:#1f7a3d}.tag.no{background:#fde7e7;color:#c0392b}.tag.warn{background:#fff3d9;color:#a07400}
+  .note{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:13px;margin:8px 0}
+  .note.warn{background:#fff3d9}
+  .kv{font-size:13.5px;margin:5px 0}.kv b{color:var(--accent2)}
+  .chk li{margin:6px 0}
+  .foot{text-align:center;color:var(--sub);font-size:11.5px;margin-top:24px}
+  .gold{color:var(--gold);font-weight:700}
+  details{margin:6px 0}summary{cursor:pointer;font-weight:600;color:var(--accent2);font-size:13.5px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🗾 후쿠오카 가족여행</h1>
+  <div class="meta">2026.6.27(토)~6.30(화) · 3박4일 · 가족+16개월 아기</div>
+  <nav id="nav">
+    <button data-t="info" class="active">기본정보</button>
+    <button data-t="d1">1일차</button>
+    <button data-t="d2">2일차</button>
+    <button data-t="d3">3일차</button>
+    <button data-t="d4">4일차</button>
+    <button data-t="food">식당·예약</button>
+    <button data-t="prep">준비·체크</button>
+  </nav>
+</header>
+<main>
+
+<!-- ===== INFO ===== -->
+<section id="info" class="active">
+  <div class="card">
+    <span class="pill">숙소</span>
+    <h2>숙소 🏠 기온역 도보 5분</h2>
+    <div class="kv">📍 하카타 사찰거리(도초지·쇼후쿠지 옆), 나카스·캐널시티 인접</div>
+    <div class="kv"><b>기온역 도보 5분</b> · 나카스카와바타(호빵맨) 8~10분 · 하카타역 10분</div>
+    <div class="note">호빵맨·캐널시티·빵스톡·하치베·이치타카가 모두 <b>도보권</b> · 체크인 11:00(전 짐보관 불가)</div>
+  </div>
+  <div class="card">
+    <span class="pill">항공</span>
+    <div class="kv">🛬 6/27(토) <b>오전 07:45 도착</b> (국제선)</div>
+    <div class="kv">🛫 6/30(화) <b>오후 19:20 출발</b> (국제선)</div>
+  </div>
+  <div class="card">
+    <span class="pill">이동 기본기</span>
+    <h3>도착하면 제일 먼저 — IC카드</h3>
+    <div class="kv">역 발매기에서 <b>하야카켄</b>(또는 스이카) 구매 → 개찰구에 터치만, 표 살 필요 없음. 지하철·JR·버스·편의점 다 됨</div>
+    <h3>노선 (구글맵이 다 알려줌 · 색만 기억)</h3>
+    <div class="kv">🟠 <b>공항선(K)</b>: 공항—하카타—기온—나카스카와바타(호빵맨)—텐진—아카사카—오호리코엔</div>
+    <div class="kv">🟢 <b>나나쿠마선(N)</b>: 하카타—쿠시다진자마에(이치타카)—텐진미나미—와타나베도리—야쿠인(바쿠로)</div>
+    <div class="kv">🚃 <b>JR</b>: 하카타—다케시타(장난감미술관/라라포트) 1정거장</div>
+    <div class="note">길찾기는 구글맵, 택시는 카카오T 일본/GO앱 이용 · <b>숙소 정확 주소는 가족 단톡방/예약 메일 참고</b>(공개 페이지에는 비표시)</div>
+  </div>
+</section>
+
+<!-- ===== DAY 1 ===== -->
+<section id="d1">
+  <div class="card">
+    <div class="day-h"><h2>1일차 · 도착 + 호빵맨</h2><span class="date">6/27(토)</span></div>
+    <ul class="tl">
+      <li><span class="t">07:45</span><span class="act">후쿠오카공항(국제선) 도착</span><span class="det">입국·수하물 약 60분</span></li>
+      <li><span class="t">~08:45</span><span class="act">택시로 나카스/캐널시티 일대</span><span class="det">약 15분 ¥1,500~2,000 · 아기+짐엔 택시(국제선 지하철 직결 아님)</span></li>
+      <li><span class="t">09:00</span><span class="act">짐 보관</span><span class="det">기온/나카스카와바타역 코인락커(특대 ¥700, 1~2개 OK) · 만석 시 ecbo cloak</span></li>
+      <li><span class="t">09:00</span><span class="act">아침 🥐 빵스톡 'stock' 천신점</span><span class="det">西中洲(캐널시티 옆) · 토요일 8:00~19:00 영업 ✅</span></li>
+      <li><span class="t">10:00</span><span class="act">호빵맨 박물관</span><span class="det">리버레인 5~6F · 1세이상 ¥1,800 / 만1세미만 무료 · 유모차 내부불가→아기띠 / 수유실 완비</span><span class="move">🚶 숙소서 도보 8~10분 / 나카스카와바타역 직결</span></li>
+      <li><span class="t">12:30</span><span class="act">점심 🍴 캐널시티 박다</span><span class="det">ゆとりの空間 등 · 수유실·유모차대여 완비</span><span class="move">🚶 리버레인→캐널시티 5분</span></li>
+      <li><span class="t">14:00</span><span class="act">숙소 체크인(11시 이후) + 낮잠</span><span class="det">캐널시티서 도보 10분 / 택시 5분 · 이른 비행 피곤→휴식</span></li>
+      <li><span class="t">18:00</span><span class="act">저녁 🦐 캐널시티 찐맛집</span><span class="det">2일차 모츠나베와 안 겹치게 <b>해산물/회</b> 추천(아래 식당탭)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== DAY 2 ===== -->
+<section id="d2">
+  <div class="card">
+    <div class="day-h"><h2>2일차 · 아프리칸 사파리 🦁</h2><span class="date">6/28(일)</span></div>
+    <div class="note">렌터카 당일 대여·반납 · 오이타 사파리 편도 약 2시간(160km)</div>
+    <ul class="tl">
+      <li><span class="t">07:30</span><span class="act">🍱 하카타역 에키벤 구매</span><span class="det">동치쿠켄 かしわめし(차에서 식어도 맛있음) · 13~14시 매진→일찍</span></li>
+      <li><span class="t">08:00</span><span class="act">렌터카 픽업 후 출발</span><span class="det">규슈道→오이타 · 통행료 편도 약 ¥4,000</span></li>
+      <li><span class="t">08:00</span><span class="act">이동 (휴게소 1회)</span><span class="det">유후다케SA 등 기저귀·수유 정차</span></li>
+      <li><span class="t">10:00</span><span class="act">아프리칸 사파리</span><span class="det">3~10월 09:30~16:30 · 성인 ¥2,600/만4세미만 무료 · <b>렌터카로 6km 코스 직접 주행</b>(창문·문 개방금지) · 후레아이존 · 정글버스(선착순 ¥1,100)</span></li>
+      <li><span class="t">13:00</span><span class="act">점심 🍱 사간 도시락</span><span class="det">사파리 내/근처에서</span></li>
+      <li><span class="t">14:00</span><span class="act">후쿠오카 복귀 (휴게소 1회)</span><span class="det">카스가/후쿠오카IC 방면</span></li>
+      <li><span class="t">16:00</span><span class="act">💎 타카야마 카스가점</span><span class="det">중고명품 최대 매장(3층)·주차36대·면세 · 10:30~20:00</span><span class="move">🚗 귀가 동선상</span></li>
+      <li><span class="t">~18:30</span><span class="act">렌터카 반납</span><span class="det">주유 후 · 반납 영업소 마감시간 확인</span></li>
+      <li><span class="t">19:00</span><span class="act">저녁 🍲 모츠나베 이치타카</span><span class="det">개실 예약 · 숙소서 도보 5~8분 · 피곤하면 숙소 근처 간단히</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== DAY 3 ===== -->
+<section id="d3">
+  <div class="card">
+    <div class="day-h"><h2>3일차 · 텐진·다이묘 🛍️</h2><span class="date">6/29(월)</span></div>
+    <div class="note warn">☔ 비 예보 → <b>실내 위주</b>(오호리공원 제외) · 월요일 휴무 주의: abeki·빵스톡 휴무 → 카페는 REC COFFEE · <b>바쿠로 정기휴무 확인</b></div>
+    <ul class="tl">
+      <li><span class="t">10:00</span><span class="act">숙소 출발</span><span class="move">🟠 기온/하카타→텐진 ¥210</span></li>
+      <li><span class="t">10:30</span><span class="act">텐진 지하상가·백화점 쇼핑</span><span class="det">다이마루·이와타야 수유실 / 텐진치카 지하상가(비 안 맞음·냉방)</span></li>
+      <li><span class="t">11:30</span><span class="act">점심 🐟 우나토토 大名店</span><span class="det">장어덮밥 ¥600~1,100 · 예약불필요</span><span class="move">🟠 아카사카역 / 텐진 도보 10분</span></li>
+      <li><span class="t">13:00</span><span class="act">카페 ☕ REC COFFEE 야쿠인역앞</span><span class="det">무휴 8:00~24:00 · 스페셜티 커피</span><span class="move">🟢 텐진→야쿠인</span></li>
+      <li><span class="t">14:00</span><span class="act">텐진·다이묘 실내 쇼핑</span><span class="det">+선택: 코메효 다이묘점·다이코쿠야 텐진점</span></li>
+      <li><span class="t">18:00</span><span class="act">저녁 🍢 하치베(야키토리)</span><span class="det">아기동반OK·완전개실 · <b>전화예약만</b>(호스트 도움) · 대안: 몬자 코코키요</span><span class="move">🚶 숙소서 도보 3~8분</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== DAY 4 ===== -->
+<section id="d4">
+  <div class="card">
+    <div class="day-h"><h2>4일차 · 장난감미술관 + 출발</h2><span class="date">6/30(화)</span></div>
+    <ul class="tl">
+      <li><span class="t">08:00</span><span class="act">체크아웃 + 짐 보관</span><span class="det">기온역 특대락커 ¥700(집에서 5분) · 만석대비 ecbo cloak</span></li>
+      <li><span class="t">08:30</span><span class="act">아침 🍣 키스이마루 博多1番街</span><span class="det">하카타역 B1 · <b>아침정식 7:30~10:00</b> 명란·갓·밥·된장국 무한리필 · 아기좌석 OK · 줄서는 인기→일찍</span></li>
+      <li><span class="t">10:00</span><span class="act">하카타→다케시타역</span><span class="det">+도보 9분(동쪽출구→직진, 건담 보임)</span><span class="move">🚃 JR 1정거장 4분 ¥170 (신칸센 아님)</span></li>
+      <li><span class="t">10:30</span><span class="act">후쿠오카 장난감 미술관</span><span class="det">라라포트 1F · 6개월~ ¥1,300 · 0~2세 아기 나무놀이터</span></li>
+      <li><span class="t">12:30</span><span class="act">점심 🍴 라라포트</span><span class="det">3F 大吉寿司(초밥)·푸드코트 · 아침 든든히 먹었으면 가볍게</span></li>
+      <li><span class="t">14:00</span><span class="act">마지막 쇼핑/휴식</span></li>
+      <li><span class="t">15:30</span><span class="act">하카타 복귀 → 짐 회수</span><span class="move">🚃 JR 4분(+기온 1정거장)</span></li>
+      <li><span class="t">~16:30</span><span class="act">공항(국제선) 도착</span><span class="det"><b>택시 직행 추천</b> 15~20분 ¥1,500~2,000 (지하철은 국내선+셔틀 환승)</span></li>
+      <li><span class="t">19:20</span><span class="act">✈️ 출발</span><span class="det">2~3시간 전 도착</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== FOOD ===== -->
+<section id="food">
+  <div class="card">
+    <h2>🍽️ 식당 · 예약</h2>
+    <p style="font-size:12.5px;color:var(--sub);margin:4px 0 0">탭하면 예약 사이트로 이동</p>
+
+    <div class="resv">
+      <b>🥐 빵스톡 'stock' 천신점</b> <span class="tag ok">아기OK</span><span class="tag warn">월휴무</span>
+      <div class="info">1일차 아침 · 西中洲6-17 · 8:00~19:00(월·1·3째화 휴무, 토 영업)</div>
+      <div class="info">☎092-406-5178</div>
+    </div>
+    <div class="resv">
+      <b>🦐 캐널시티 저녁 (1일차)</b>
+      <div class="info">변화 주려면 <b>해산물</b>: 海鮮屋 はじめの一歩 / KUOHKA(B1)</div>
+      <div class="info">모츠나베 원하면 <b>잇토쿠야</b>(개실·아기OK): <a href="https://www.hotpepper.jp/strJ001179783/">HotPepper 예약</a> ※2일차와 메뉴 겹침</div>
+    </div>
+    <div class="resv">
+      <b>🍲 모츠나베 이치타카 (2일차 저녁)</b> <span class="tag ok">개실</span>
+      <div class="info">숙소 도보 5~8분 · 개실8개 · ☎092-627-7007</div>
+      <div class="info"><a href="https://yoyaku.toreta.in/ichitaka-hakataekimae/">온라인 예약하기 →</a></div>
+    </div>
+    <div class="resv">
+      <b>🍢 하치베 (3일차 저녁)</b> <span class="tag ok">아기OK·완전개실</span><span class="tag no">전화만</span>
+      <div class="info">스미요시1-1-9 · 숙소 도보 3~8분 · 연중무휴 17:00~ · 룸차지¥1,500</div>
+      <div class="info">전화예약만 → 호스트 대행 추천 · <a href="https://www.hotpepper.jp/strJ001186893/">정보(HotPepper)</a> · <a href="https://hachibei.com">공식</a></div>
+    </div>
+    <div class="resv">
+      <b>🍣 키스이마루 博多1番街 (4일차 아침)</b> <span class="tag ok">아기좌석</span>
+      <div class="info">하카타역 B1 · 아침정식 7:30~10:00 무한리필 · 워크인(인기·줄)</div>
+      <div class="info"><a href="https://www.hotpepper.jp/strJ001277250/">정보(HotPepper)</a></div>
+    </div>
+    <div class="resv">
+      <b>🐟 우나토토 大名店 (3일차 점심)</b> <span class="tag ok">예약불필요</span>
+      <div class="info">장어덮밥 ¥600~1,100 · 워크인 ☎092-406-5139 · 같은 건물 밤엔 몬자 코코키요</div>
+      <div class="info">코코키요 예약: <a href="https://www.hotpepper.jp/strJ003599068/">HotPepper</a> ☎092-406-5149</div>
+    </div>
+    <div class="resv">
+      <b>🥩 바쿠로(야쿠인·와규) — 3일차 대안</b> <span class="tag ok">아기·유모차</span><span class="tag warn">휴무확인</span>
+      <div class="info">야쿠인 3-12-41 · ☎050-5600-7361</div>
+      <div class="info"><a href="https://tabelog.com/en/fukuoka/A4001/A400104/40007081/">타베로그 온라인(영어)</a></div>
+    </div>
+    <div class="resv">
+      <b>☕ REC COFFEE 야쿠인역앞 (3일차 카페)</b> <span class="tag ok">무휴</span>
+      <div class="info">白金1-1-26 · 8:00~24:00 · ☎092-524-2280</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>💎 타카야마 카스가점 (2일차·중고명품 최대)</h3>
+    <div class="kv">카스가시 오카모토1-106-1 · 10:30~20:00(2째 수 휴무) · 주차36대 · <b>면세</b></div>
+    <div class="kv">시계·가방·보석·악기 풍부 · 렌터카 귀가 동선상</div>
+    <details><summary>추가로 더 볼 곳(3일차 텐진)</summary>
+      <div class="kv">타카야마 텐진점(텐진미나미역 3분) / KOMEHYO 다이묘점 / 다이코쿠야 텐진점</div>
+    </details>
+  </div>
+</section>
+
+<!-- ===== PREP ===== -->
+<section id="prep">
+  <div class="card">
+    <h2>🧳 사전 준비 (한국에서)</h2>
+    <ul class="chk">
+      <li>✅ <b>국제운전면허증(IDP)</b> — 1949 제네바협약 책자형만 일본 인정 · 원본면허+여권+IDP 3종 지참</li>
+      <li>✅ <b>렌터카+유아 카시트 예약</b> — 만6세미만 카시트 의무 · <a href="https://rent.toyota.co.jp/">토요타</a>/<a href="https://www.timescar-rental.com/">타임즈</a> · 2일차 당일 대여·반납</li>
+      <li>✅ <b>ecbo cloak 앱</b> 설치 — <a href="https://cloak.ecbo.io">cloak.ecbo.io</a></li>
+      <li>✅ 식당 예약 — 이치타카·잇토쿠야(온라인) / 하치베(전화·호스트대행)</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>👶 아기 동반 팁</h3>
+    <div class="kv">· 6월말 장마+더위 → 우비·모자·물·여벌옷</div>
+    <div class="kv">· 호빵맨·장난감미술관 유모차 내부불가 → <b>아기띠</b> 병행</div>
+    <div class="kv">· 수유실/기저귀: 호빵맨·장난감미술관·캐널시티·백화점 완비</div>
+    <div class="kv">· 매일 오후 낮잠 시간 확보(유모차 낮잠)</div>
+  </div>
+  <div class="card">
+    <h3>💰 대략 예산</h3>
+    <div class="kv">입장료: 호빵맨 ¥3,600~ / 사파리 성인¥2,600(아기무료) / 장난감미술관 ¥1,700+¥1,300</div>
+    <div class="kv">렌터카(2일차): 차량+보험+카시트 ¥8,000~12,000 +통행료 왕복¥8,000 +주유</div>
+    <div class="kv">택시 회당 ¥1,500~2,000 · 지하철 구간 ¥210</div>
+  </div>
+  <div class="card">
+    <h3>☑️ 출발 전 재확인</h3>
+    <ul class="chk">
+      <li>· 호빵맨/장난감미술관 6월말 영업시간·요금</li>
+      <li>· 사파리 영업시간·정글버스 / NEXCO 통행료(en.driveplaza.com)</li>
+      <li>· 렌터카 카시트 재고 + IDP 발급</li>
+      <li>· 식당 휴무: <b>바쿠로</b> 확인 / 하치베 전화예약</li>
+      <li>· 타카야마 카스가점 2째 수요일 휴무 주의</li>
+      <li>· 기온역 특대락커(6개뿐) 불안하면 ecbo cloak 예약</li>
+      <li>· 호스트에 이른 짐보관·체크인 가능 여부 문의</li>
+    </ul>
+  </div>
+</section>
+
+<div class="foot">후쿠오카 가족여행 · 시간·요금은 2026.6 기준, 출발 전 재확인 권장</div>
+</main>
+<script>
+  var nav=document.getElementById('nav');
+  nav.addEventListener('click',function(e){
+    var b=e.target.closest('button'); if(!b)return;
+    document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('main section').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.getElementById(b.dataset.t).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+</script>
+</body>
+</html>
