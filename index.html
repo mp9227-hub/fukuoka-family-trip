@@ -298,7 +298,11 @@
   });
 
   // ===== 가족 공유 편집 =====
-  var STORE="https://kvdb.io/8dnrHjvRDAPeEkR3GFMzB9/fukuoka-trip"; // 공유 저장소
+  // ===== Supabase 공유 저장소 =====
+  var SUPA_URL="https://zsrppnyyxkffydwkwoze.supabase.co";
+  var SUPA_KEY="sb_publishable_jGhDFUPhPA5g8jzKh3AGxA_iUJbv9sn"; // publishable(공개용) 키
+  var ROW=SUPA_URL+"/rest/v1/trip_doc?id=eq.1";
+  var SUPA_HEADERS={'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY};
   var SECTIONS=["info","d1","d2","d3","d4","food","prep"];
   var editing=false;
   var editBtn=document.getElementById('editBtn'),
@@ -318,23 +322,26 @@
   async function loadRemote(showmsg){
     setSync('불러오는 중…');
     try{
-      var r=await fetch(STORE+'?t='+Date.now(),{cache:'no-store'});
-      if(r.status===200){var t=await r.text(); if(t&&t.trim()){applyData(JSON.parse(t));localStorage.setItem('fk_cache',t);setSync('최신본 ✓');if(showmsg)toast('최신 내용으로 새로고침했어요');return;}}
-      // 저장된 공유본 없음 → 로컬 캐시 있으면 표시
+      var r=await fetch(ROW+'&select=content&t='+Date.now(),{headers:SUPA_HEADERS,cache:'no-store'});
+      if(r.ok){
+        var arr=await r.json(); var c=(arr&&arr[0]&&arr[0].content)||{};
+        var hasReal=SECTIONS.some(function(id){return c[id]!=null;});
+        if(hasReal){applyData(c);localStorage.setItem('fk_cache',JSON.stringify(c));setSync('최신본 ✓');if(showmsg)toast('최신 내용으로 새로고침했어요');return;}
+        setSync('기본본(아직 저장된 편집 없음)');return;
+      }
       if(useCache())setSync('이 기기 저장본 표시(공유 미반영)');else setSync('기본본');
     }catch(e){
       if(useCache())setSync('연결 실패 — 캐시본 표시');else setSync('연결 실패 — 기본본');
     }
   }
   async function saveRemote(){
-    var t=JSON.stringify(collectData());
-    localStorage.setItem('fk_cache',t);
+    var data=collectData();
+    localStorage.setItem('fk_cache',JSON.stringify(data));
     setSync('저장 중…');
     try{
-      var r=await fetch(STORE,{method:'PUT',headers:{'Content-Type':'application/json'},body:t});
+      var r=await fetch(ROW,{method:'PATCH',headers:Object.assign({'Content-Type':'application/json','Prefer':'return=minimal'},SUPA_HEADERS),body:JSON.stringify({content:data})});
       if(r.ok){toast('저장됐어요! 가족 모두에게 반영됩니다 ✅');setSync('저장됨 ✓');}
-      else if(r.status===403){toast('공유저장 활성화 전이라 지금은 이 기기에만 저장됐어요',true);setSync('로컬만 저장(활성화 필요)');}
-      else{toast('클라우드 저장 실패('+r.status+') — 이 기기엔 저장됨',true);setSync('로컬만 저장');}
+      else{toast('저장 실패('+r.status+') — 이 기기엔 저장됨',true);setSync('로컬만 저장');}
     }catch(e){toast('연결 실패 — 이 기기에만 저장됨',true);setSync('로컬만 저장');}
   }
   function setEditing(on){
